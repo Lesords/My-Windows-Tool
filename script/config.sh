@@ -9,4 +9,5 @@ bin_list=(
     tokei
     delta
     fzf
+    tree
 )

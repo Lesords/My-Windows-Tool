@@ -83,6 +83,17 @@ fzf()
     unzip "$fzf.zip" && mv "fzf.exe" ${bin_path}
 }
 
+tree() {
+    tree_version="1.5.2.2"
+    tree="tree-${tree_version}-bin"
+    tree_url="https://nchc.dl.sourceforge.net/project/gnuwin32/tree/${tree_version}/${tree}.zip"
+
+    curl -LJO $tree_url
+    [ $? -ne 0 ] && echo "curl failed here" && return 1
+
+    unzip "$tree.zip" && mv "bin/tree.exe" ${bin_path}
+}
+
 main()
 {
     [ ! -d ${bin_path} ] && mkdir ${bin_path}
