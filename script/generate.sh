@@ -56,7 +56,7 @@ tokei()
     curl -LJO $tokei_url
     [ $? -ne 0 ] && echo "curl failed here" && return 1
 
-    mv $tokei ${bin_path}
+    mv $tokei ${bin_path}/tokei.exe
 }
 
 delta()
