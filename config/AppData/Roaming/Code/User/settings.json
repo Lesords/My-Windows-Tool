@@ -1,0 +1,52 @@
+{
+    "remote.SSH.remotePlatform": {
+        "192.168.1.78": "linux"
+    },
+    "editor.fontFamily": "Hack Nerd font",
+    "terminal.integrated.fontFamily": "Hack Nerd font",
+    "editor.fontLigatures": false,
+    "npm.keybindingsChangedWarningShown": true,
+    "extensions.autoCheckUpdates": false,
+    "vim.easymotion": true,
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["<C-q>"],
+            "commands": [":q"]
+        },
+        {
+            "before": ["<leader>", "h"],
+            "after": ["<C-w>", "h"]
+        },
+        {
+            "before": ["<leader>", "j"],
+            "after": ["<C-w>", "j"]
+        },
+        {
+            "before": ["<leader>", "k"],
+            "after": ["<C-w>", "k"]
+        },
+        {
+            "before": ["<leader>", "l"],
+            "after": ["<C-w>", "l"]
+        },
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [],
+    "vim.insertModeKeyBindings": [
+
+        {
+            "before": ["<C-j>"],
+            "after": ["<Esc>"]
+        },
+    ],
+    "vim.handleKeys": {
+        "<C-p>": false,
+        "<C-f>": false,
+        "<C-d>": true,
+        "<C-s>": false,
+        "<C-z>": false
+    },
+    "vim.commandLineModeKeyBindings": [
+
+    ]
+}
