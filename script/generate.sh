@@ -4,7 +4,7 @@ source "./script/config.sh"
 
 bat()
 {
-    bat_version="v0.24.0"
+    bat_version="v0.25.0"
     bat="bat-${bat_version}-x86_64-pc-windows-gnu"
     bat_url="https://github.com/sharkdp/bat/releases/download/${bat_version}/${bat}.zip"
 
@@ -26,7 +26,7 @@ diff-so-fancy()
 
 lazygit()
 {
-    lazygit_version="0.42.0"
+    lazygit_version="0.45.2"
     lazygit="lazygit_${lazygit_version}_Windows_x86_64"
     lazygit_url="https://github.com/jesseduffield/lazygit/releases/download/v${lazygit_version}/${lazygit}.zip"
 
@@ -50,8 +50,9 @@ rg()
 
 tokei()
 {
+    tokei_version="v13.0.0-alpha.0"
     tokei="tokei-x86_64-pc-windows-msvc.exe"
-    tokei_url="https://github.com/XAMPPRocky/tokei/releases/download/v13.0.0-alpha.0/${tokei}"
+    tokei_url="https://github.com/XAMPPRocky/tokei/releases/download/${tokei_version}/${tokei}"
 
     curl -LJO $tokei_url
     [ $? -ne 0 ] && echo "curl failed here" && return 1
@@ -61,7 +62,7 @@ tokei()
 
 delta()
 {
-    delta_version="0.17.0"
+    delta_version="0.18.2"
     delta="delta-${delta_version}-x86_64-pc-windows-msvc"
     delta_url="https://github.com/dandavison/delta/releases/download/${delta_version}/${delta}.zip"
 
@@ -73,7 +74,7 @@ delta()
 
 fzf()
 {
-    fzf_version="0.54.0"
+    fzf_version="0.58.0"
     fzf="fzf-${fzf_version}-windows_amd64"
     fzf_url="https://github.com/junegunn/fzf/releases/download/v${fzf_version}/${fzf}.zip"
 
