@@ -144,6 +144,18 @@ gh()
     unzip "${gh}.zip" && mv "bin/gh.exe" ${bin_path}
 }
 
+arduino-cli()
+{
+    arduino_cli_version="1.1.1"
+    arduino="arduino-cli_${arduino_cli_version}_Windows_64bit"
+    arduino_cli_url="https://github.com/arduino/arduino-cli/releases/download/v${arduino_cli_version}/${arduino}.zip"
+
+    curl -LJO $arduino_cli_url
+    [ $? -ne 0 ] && echo "curl failed here" && return 1
+
+    unzip "${arduino}.zip" && mv "arduino-cli.exe" ${bin_path}
+}
+
 handle()
 {
     handle="Handle"

@@ -14,6 +14,7 @@ bin_list=(
     vifm
     fastfetch
     gh
+    arduino-cli
 
     handle
 )
