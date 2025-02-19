@@ -106,6 +106,18 @@ jq() {
     mv ${jq} ${bin_path}/jq.exe
 }
 
+vifm()
+{
+    vifm_version="0.14"
+    vifm="vifm-w64-se-${vifm_version}-binary"
+    vifm_url="https://github.com/vifm/vifm/releases/download/v${vifm_version}/${vifm}.zip"
+
+    curl -LJO $vifm_url
+    [ $? -ne 0 ] && echo "curl failed here" && return 1
+
+    unzip "${vifm}.zip" && mv "${vifm}/vifm.exe" ${bin_path}
+}
+
 handle() {
     handle="Handle"
     handle_url="https://download.sysinternals.com/files/${handle}.zip"

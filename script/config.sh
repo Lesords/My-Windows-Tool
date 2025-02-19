@@ -11,6 +11,7 @@ bin_list=(
     fzf
     tree
     jq
+    vifm
 
     handle
 )
