@@ -113,7 +113,7 @@ main()
     mkdir tmp && cd tmp
 
     for i in ${bin_list[@]}; do
-        if [ -f "$bin_path/$i.exe" ]; then
+        if [[ -f "$bin_path/$i.exe" || -f "$bin_path/$i" ]]; then
             echo "=== ${i} already done here ===" && echo
             continue
         fi
