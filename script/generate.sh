@@ -84,7 +84,8 @@ fzf()
     unzip "$fzf.zip" && mv "fzf.exe" ${bin_path}
 }
 
-tree() {
+tree()
+{
     tree_version="1.5.2.2"
     tree="tree-${tree_version}-bin"
     tree_url="https://nchc.dl.sourceforge.net/project/gnuwin32/tree/${tree_version}/${tree}.zip"
@@ -95,7 +96,8 @@ tree() {
     unzip "$tree.zip" && mv "bin/tree.exe" ${bin_path}
 }
 
-jq() {
+jq()
+{
     jq_version="jq-1.7.1"
     jq="jq-windows-amd64.exe"
     jq_url="https://github.com/jqlang/jq/releases/download/${jq_version}/${jq}"
@@ -142,7 +144,8 @@ gh()
     unzip "${gh}.zip" && mv "bin/gh.exe" ${bin_path}
 }
 
-handle() {
+handle()
+{
     handle="Handle"
     handle_url="https://download.sysinternals.com/files/${handle}.zip"
 
