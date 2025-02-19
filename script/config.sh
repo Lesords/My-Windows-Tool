@@ -10,6 +10,7 @@ bin_list=(
     delta
     fzf
     tree
+    jq
 
     handle
 )

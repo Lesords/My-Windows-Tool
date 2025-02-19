@@ -95,6 +95,17 @@ tree() {
     unzip "$tree.zip" && mv "bin/tree.exe" ${bin_path}
 }
 
+jq() {
+    jq_version="jq-1.7.1"
+    jq="jq-windows-amd64.exe"
+    jq_url="https://github.com/jqlang/jq/releases/download/${jq_version}/${jq}"
+
+    curl -LJO $jq_url
+    [ $? -ne 0 ] && echo "curl failed here" && return 1
+
+    mv ${jq} ${bin_path}/jq.exe
+}
+
 handle() {
     handle="Handle"
     handle_url="https://download.sysinternals.com/files/${handle}.zip"
