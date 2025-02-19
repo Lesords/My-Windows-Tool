@@ -12,6 +12,8 @@ bin_list=(
     tree
     jq
     vifm
+    fastfetch
+    gh
 
     handle
 )

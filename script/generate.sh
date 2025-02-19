@@ -118,6 +118,30 @@ vifm()
     unzip "${vifm}.zip" && mv "${vifm}/vifm.exe" ${bin_path}
 }
 
+fastfetch()
+{
+    fastfetch_version="2.37.0"
+    fastfetch="fastfetch-windows-amd64"
+    fastfetch_url="https://github.com/fastfetch-cli/fastfetch/releases/download/${fastfetch_version}/${fastfetch}.zip"
+
+    curl -LJO $fastfetch_url
+    [ $? -ne 0 ] && echo "curl failed here" && return 1
+
+    unzip "${fastfetch}.zip" && mv "fastfetch.exe" ${bin_path}
+}
+
+gh()
+{
+    gh_version="2.67.0"
+    gh="gh_${gh_version}_windows_amd64"
+    gh_url="https://github.com/cli/cli/releases/download/v${gh_version}/${gh}.zip"
+
+    curl -LJO $gh_url
+    [ $? -ne 0 ] && echo "curl failed here" && return 1
+
+    unzip "${gh}.zip" && mv "bin/gh.exe" ${bin_path}
+}
+
 handle() {
     handle="Handle"
     handle_url="https://download.sysinternals.com/files/${handle}.zip"
