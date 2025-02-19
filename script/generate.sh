@@ -95,6 +95,16 @@ tree() {
     unzip "$tree.zip" && mv "bin/tree.exe" ${bin_path}
 }
 
+handle() {
+    handle="Handle"
+    handle_url="https://download.sysinternals.com/files/${handle}.zip"
+
+    curl -LJO $handle_url
+    [ $? -ne 0 ] && echo "curl failed here" && return 1
+
+    unzip "${handle}.zip" && mv "handle.exe" ${bin_path}
+}
+
 main()
 {
     [ ! -d ${bin_path} ] && mkdir ${bin_path}

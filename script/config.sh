@@ -10,4 +10,6 @@ bin_list=(
     delta
     fzf
     tree
+
+    handle
 )
