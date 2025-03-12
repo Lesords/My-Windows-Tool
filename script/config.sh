@@ -9,6 +9,7 @@ bin_list=(
     tokei
     delta
     fzf
+    ttyper
     tree
     jq
     vifm

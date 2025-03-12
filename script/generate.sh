@@ -84,6 +84,18 @@ fzf()
     unzip "$fzf.zip" && mv "fzf.exe" ${bin_path}
 }
 
+ttyper()
+{
+    ttyper_version="v1.6.0"
+    ttyper="ttyper-x86_64-pc-windows-msvc"
+    ttyper_url="https://github.com/max-niederman/ttyper/releases/download/${ttyper_version}/${ttyper}.zip"
+
+    curl -LJO $ttyper_url
+    [ $? -ne 0 ] && echo "curl failed here" && return 1
+
+   unzip ${ttyper}.zip && mv "ttyper.exe" ${bin_path}
+}
+
 tree()
 {
     tree_version="1.5.2.2"
